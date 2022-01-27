@@ -4,6 +4,7 @@ const {forcast} = require('./utils/weatherForcast')
 const express = require('express');
 const hbs = require('hbs');
 const app = express();
+const port = process.env.PORT||3000;
 // paths for dirs
 const publicFolderAddress = path.join(__dirname,'..','public')
 const viewDirAddress = path.join(__dirname,'..', 'templates','views')
@@ -62,6 +63,6 @@ app.get('/help/*',(req,res)=> {
 app.get('*',(req,res)=> {
     res.render('errors',{ title : "Page Not Found"})
 })
-app.listen(3000,()=> {
-    console.log("the server is running at  port 3000");
+app.listen(port,()=> {
+    console.log("the server is running at  port " , port);
 })
