@@ -1,4 +1,5 @@
 const path = require('path');
+const fs = require('fs');
 const {geoCode} = require('./utils/geocode')
 const {forcast} = require('./utils/weatherForcast')
 const express = require('express');
@@ -41,6 +42,12 @@ geoCode(req.query.address,(err,geoRes)=> {
     if(err){
         return res.send({error :  err})
     }
+    let logs = ` address : ${req.query.address}  date : ${new Date().toString()} \n`
+    fs.appendFile('./src/server.log',logs,(e)=> {
+        if(e){
+            return console.log("something went wrong while writing logs");
+        }
+    })
     forcast(geoRes,(err , { place_name ,weather_forcast })=> {
 if(err){
     return res.send({error : err})
