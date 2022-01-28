@@ -1,3 +1,46 @@
-h2 {
-    background-color: black;
+body {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding:  0 16px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
+.main {
+    flex-grow: 1;
+}
+footer {
+    background: black;
+    border-top: 1px solid white;
+    padding : 10px;
+    margin-top: 60px;
+}
+header {
+    border: 1px solid white;
+    background: black;
+    margin-top: 16px;
+    margin-bottom: 40px;
+}
+h1 {
+    font-size: 40px;
+    color: black;
+    margin-bottom: 16px;
+}
+ul {
+    list-style: none;
+}
+
+ul li {
+    display: inline;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+

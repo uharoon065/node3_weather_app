@@ -68,7 +68,7 @@ app.get('/help/*',(req,res)=> {
     res.render('errors', { title : "the text you are looking for  not found"})
 })
 app.get('*',(req,res)=> {
-    res.render('errors',{ title : "Page Not Found"})
+    res.render('errors',{ title : "404" , name : "usman"})
 })
 app.listen(port,()=> {
     console.log("the server is running at  port " , port);

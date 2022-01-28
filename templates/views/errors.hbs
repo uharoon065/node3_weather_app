@@ -4,11 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>error</title>
-    <link rel="stylesheet" href="/css/style2.css">
+    <title>404</title>
+    <link rel="icon" href="/images/weather.png">
+    <link rel="stylesheet" href="/css/style1.css">
 </head>
 <body>
-    <h1> 404</h1>
-    <p> {{title}}  go back to <a href="/help"></a>  page </p>
+    <div class="main">
+        {{>header}}
+    <p>  Page not found</p>
+    <p>   go back to <a href="/help"></a>  page </p>
+    </div>
+    {{>footer}}
 </body>
 </html>
